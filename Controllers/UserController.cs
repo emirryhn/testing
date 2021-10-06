@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 namespace HiringTest.Controllers
 {
     [ApiController]
+    [Route ("api/[controller]")]
 
     public class UserController : Controller
     {
@@ -17,24 +18,10 @@ namespace HiringTest.Controllers
         UserData userData = new UserData();
         
         [HttpGet]
-        public IActionResult userLogin()
+        public IActionResult GetAllUser()
         {
-            Console.WriteLine("Enter username : ");
-            string name  = Console.ReadLine();
-
-            Console.WriteLine("Enter password : ");
-            string password  = Console.ReadLine();
-
-            userData.login(name, password);
-            
-            if(name != "Dono")
-            {
-                return BadRequest();
-            }
-            else{
-                Console.WriteLine("berhasil");
-                return Ok();
-            }
+            userData.GetUser();
+            return Ok();
         }
 
     }

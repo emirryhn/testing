@@ -8,47 +8,29 @@ namespace HiringTest.Data
 {
     public class UserData
     {
-
+        UserModel userModel;
         // List<UserModel> userModels = new List<UserModel>();
-        UserModel user;
-        public UserModel login(string username, string password)
+        private List<UserModel> UserModels()
         {
-            //code
-            UserModel user = new UserModel();
-
-            user.Name = "Dono";
-            user.Password = "12345";
-
-            // Console.WriteLine("Enter username : ");
-            // string name  = Console.ReadLine();
-
-            // Console.WriteLine("Enter password : ");
-            // string pass  = Console.ReadLine();
-            
-            // if(name != "Dono")
-            // {
-            //     Console.WriteLine("error");
-            // }
-            // else{
-            //     Console.WriteLine("berhasil");
-            // }
-                   
-            return user;
-
+            return new List<UserModel>
+            {
+                new UserModel() {Id=1, Name="User 1", Password="12345"},
+                new UserModel() {Id=1, Name="User 2", Password="12345"},
+                new UserModel() {Id=1, Name="User 3", Password="12345"},
+                new UserModel() {Id=1, Name="User 4", Password="12345"}                
+            };
         }
 
-        // public List<UserModel> getAllUser()
+        public string GetUser()
+        {
+            var users = UserModels();
+            return "ok";
+        }
+
+        // public UserModel registerUser(UserModel userModel)
         // {
-        //     return  ;
-        // }
-
-        public UserModel registerUser(UserModel userModel)
-        {
-            // code
-
             
-            return userModel ;
-        }
+        // }
         
     }
     
