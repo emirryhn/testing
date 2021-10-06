@@ -10,18 +10,24 @@ using Microsoft.Extensions.Logging;
 namespace HiringTest.Controllers
 {
     [ApiController]
-    [Route ("api/[controller]")]
 
     public class UserController : Controller
     {
 
         UserData userData = new UserData();
         
-        [HttpGet]
+        [HttpGet ("user/all")]
         public IActionResult GetAllUser()
         {
-            userData.GetUser();
-            return Ok();
+            var user = userData.GetUser();
+            if(user == null)
+            {
+                return BadRequest();
+            }
+            else
+            {
+                return Ok(user);
+            }
         }
 
     }
