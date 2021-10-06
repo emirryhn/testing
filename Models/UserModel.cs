@@ -1,17 +1,21 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
 namespace HiringTest.Models
 {
     public class UserModel
     {
-        private long Id {get;set;}
-        private string Name {get;set;}
-        private string Password {get;set;}
+        public long Id {get;set;}
+        public string Name {get;set;}
+        public string Password {get;set;}
 
-        public UserModel(long id, string name, string password)
-        {
-            Id = id;
-            Name = name;
-            Password = password;
-        }
+        // public UserModel(long id, string name, string password)
+        // {
+        //     Id = id;
+        //     Name = name;
+        //     Password = password;
+        // }
     }
 }
