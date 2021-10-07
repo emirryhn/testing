@@ -20,7 +20,7 @@ namespace HiringTest
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>().UseUrls("http://192.168.0.3:5001");
+                    webBuilder.UseStartup<Startup>().UseUrls("http://10.163.200.45:5001");
                 });
     }
 }
